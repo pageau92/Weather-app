@@ -1,4 +1,4 @@
-import { GiModernCity } from 'react-icons/gi';
+
 import { FaTemperatureHigh, FaTemperatureLow } from 'react-icons/fa';
 
 
@@ -26,7 +26,7 @@ const DisplayWeatherResults = (props) => {
               <p>Wind speed: {allWeatherResults.wind.speed} meters/sec</p>
             </div>
             <div>
-              <h3><GiModernCity /> {allWeatherResults.name} | {allWeatherResults.sys.country}</h3>
+              <h3>{allWeatherResults.name} | {allWeatherResults.sys.country}</h3>
             </div>
           </main>
         ) : null}
