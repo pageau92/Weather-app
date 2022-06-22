@@ -24,7 +24,7 @@ function App() {
         appid: apiKey,
         lang: "en",
         units: "metric",
-        q: searchCity,
+        q: citySearch,
       }
     }).then( (response) => {
       setWeatherData(response.data);
@@ -37,7 +37,7 @@ function App() {
         timer: 2500
       })
     })
-  }, [searchCity]);
+  }, [citySearch]);
 
 
   const cityResults = (userCity) => {

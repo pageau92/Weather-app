@@ -16,7 +16,7 @@ const UserSelectCity = (props) => {
     return (
         <form className="searchForm" onSubmit={handleSubmit}>
            
-            <label htmlFor="searchField" className="searchField sr-only">Enter your city in the search field</label>
+            <label htmlFor="searchField" className="searchField sr-only"></label>
             <input type="text"
             className="searchField" 
             placeholder="Enter your city"
