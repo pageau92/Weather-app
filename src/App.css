@@ -19,10 +19,6 @@ h1, h2, h3, p {
 }
 
 
-
-
-
-
 form {
   display: flex;
   flex-direction: column;
