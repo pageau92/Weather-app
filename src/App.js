@@ -26,6 +26,8 @@ function App() {
         units: "metric",
         q: citySearch,
       }
+
+      
     }).then( (response) => {
       setWeatherData(response.data);
     }).catch(error => {
