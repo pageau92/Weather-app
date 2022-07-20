@@ -11,7 +11,9 @@ const DisplayWeatherResults = (props) => {
       <>
         {allWeatherResults !== null ? (
           <main className="weatherResultsContainer">
-            <h2>Forecast</h2>
+            <div>
+              <h3>{allWeatherResults.name} | {allWeatherResults.sys.country}</h3>
+            </div>
             <h3 className="weatherDescription">{allWeatherResults.weather[0].description}</h3>
             <div className="iconImage">
               <img src={`https://openweathermap.org/img/w/${allWeatherResults.weather[0].icon}.png`} alt={allWeatherResults.weather[0].main}/>
@@ -21,12 +23,12 @@ const DisplayWeatherResults = (props) => {
               <p>Feels like: {parseFloat(allWeatherResults.main.feels_like).toFixed(1)} &deg;C</p>
             </div>
             <div className="temperatureRange">
-              <p><FaTemperatureHigh /> {parseFloat(allWeatherResults.main.temp_max).toFixed(1)} &deg;C  ||  <FaTemperatureLow /> {parseFloat(allWeatherResults.main.temp_min).toFixed(1)} &deg;C</p>
+              <p>High:</p>
+              <p className='icons'><FaTemperatureHigh /> {parseFloat(allWeatherResults.main.temp_max).toFixed(1)} &deg;C</p>
+              <p>Low:</p>
+              <p className='icons'><FaTemperatureLow /> {parseFloat(allWeatherResults.main.temp_min).toFixed(1)} &deg;C</p>
               <p>Humidity: {allWeatherResults.main.humidity} %</p>
               <p>Wind speed: {allWeatherResults.wind.speed} meters/sec</p>
-            </div>
-            <div>
-              <h3>{allWeatherResults.name} | {allWeatherResults.sys.country}</h3>
             </div>
           </main>
         ) : null}

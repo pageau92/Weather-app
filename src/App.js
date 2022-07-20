@@ -36,6 +36,7 @@ function App() {
         title: "error",
         text: 'Sorry! Unable to find your city!',
         icon: 'error',
+        // removes error message within a certain time frame
         timer: 2500
       })
     })
@@ -51,12 +52,12 @@ function App() {
     <>
       <div className="wrapper">
         <header>
-          <h1 className="title">Weather!!</h1>
+          <h1 className="title">Today's Weather</h1>
         </header>
       
         <UserSelectCity cityResults={cityResults} />
-
         <DisplayWeatherResults allWeatherResults={weatherData}/>
+       
       </div>
       <>
         <footer className="footer">
